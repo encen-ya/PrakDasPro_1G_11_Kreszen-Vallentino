@@ -1,33 +1,34 @@
 import java.util.Scanner;
-import java.util.scanner;
 public class SIAKAD11 {
     public static void main(String[] args) {
-        Scanner sc = new scanner(system.in);
+        Scanner sc = new Scanner(System.in);
         String nama, nim;
         char kelas;
-        byte Absen;
-        double nilaiKuis, nilaiTugas, nilaiUjian, nilaiAkhir;
+        byte absen;
+        double nilaiTugas, nilaiKuis, nilaiUjian, nilaiAkhir;
 
-        System.out.println("Masukkan nama:  ");
-        nama = sc.nextline("Kreszen Vallentino Arjuna Wijono");
-        System.out.println("Masukkan NIM;  ");
-        nim = sc.nextLine("244017020206");
-        System.out.println("Masukkan kelas:  ");
-        kelas = sc.nextLine("1G").charAt(0);
-        System.out.println("Masukkan nomor absen:  ");
-        absen = sc.nextByte("11");
-        System.out.println("Masukkan nilai kelas;  ");
-        nilaiKuis = sc.nextDouble("85");
-        System.out.println("Masukkan nilai tugas:  ");
-        nilaiTugas = sc.nextDouble("86");
-        System.out.println("Masukkan nilai ujian:  ");
-        nilaiUjian = sc.nextDouble("87");
+        System.out.print("Masukkan Nama: ");
+        nama = sc.nextLine();
+        System.out.print("Masukkan Nim: ");
+        nim = sc.nextLine();
+        System.out.print("Masukkan Kelas: ");
+        kelas = sc.nextLine().charAt(0);
+        System.out.print("Masukkan nomor absen: ");
+        absen = sc.nextByte();
+        System.out.print("Masukkan nilai kuis: ");
+        nilaiKuis = sc.nextDouble();
+        System.out.print("Masukkan nilai tugas: ");
+        nilaiTugas = sc.nextDouble();
+        System.out.print("Masukkan nilai ujian: ");
+        nilaiUjian = sc.nextDouble();
 
         nilaiAkhir = (nilaiKuis + nilaiTugas + nilaiUjian) / 3;
 
-        System.out.println("Nama:  " + nama + "NIM:  " + nim);
-        System.out.println("Kelas:  " + kelas + "Absen:  " + absen);
-        System.out.println("Nilai Akhir:  " + nilaiAkhir );
+//        System.out.println("Nama: " + nama + " Nim: " + nim);
+//        System.out.println("Kelas: " + kelas + " Absen: " + absen);
+        System.out.println("nilaiAkhir: " + nilaiAkhir);
+
+        
     }
     
 }
