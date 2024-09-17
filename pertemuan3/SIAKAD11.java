@@ -21,11 +21,11 @@ public class SIAKAD11 {
         System.out.print("Masukkan nilai ujian: ");
         nilaiUjian = sc.nextDouble();
 
-        Nilai-Akhir = (nilaiKuis + nilaiTugas + nilaiUjian) / 3;
+        Nilai-Akhir= (nilaiKuis + nilaiTugas + nilaiUjian) / 3;
 
         System.out.println("Nama: " + nama + " Nim: " + nim);
         System.out.println("Kelas: " + kelas + " Absen: " + absen);
-        System.out.println("nilaiAkhir: " + nilaiAkhir);
+        System.out.println("nilaiAkhir: " + Nilai-Akhir);
 
         
     }
