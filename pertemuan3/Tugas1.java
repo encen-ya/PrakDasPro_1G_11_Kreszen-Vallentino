@@ -4,7 +4,8 @@ public class Tugas1 {
     public static void main(String[] args) {
         Scanner n = new Scanner(System.in);
         
-        int jumlahPenggunaanListrik, totalTarifListrik;
+        int jumlahPenggunaanListrik;
+        double totalTarifListrik;
         boolean melebihi500;    
         
         System.out.print("Jumlah penggunaan listrik(kWh): ");
