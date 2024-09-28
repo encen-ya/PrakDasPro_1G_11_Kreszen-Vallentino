@@ -1,8 +1,10 @@
 {
     "java.project.sourcePaths": [
         "src",
+        "pertemuan4",
+        "pertemuan3",
         "pertemuan2",
-        "pertemuan3"
+        "pertemuan5"
     ],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
