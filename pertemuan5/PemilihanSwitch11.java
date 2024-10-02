@@ -15,7 +15,7 @@ public class PemilihanSwitch11 {
             angka1 = sc.nextInt();
             System.out.print("Masukkan angka 2 : ");
             angka2 = sc.nextInt();
-            System.out.print("Masukkan Operator(+ - * :)");
+            System.out.print("Masukkan Operator(+ - *) :");
             operator = sc.next().charAt(0);
 
             switch (operator) {
@@ -30,6 +30,9 @@ public class PemilihanSwitch11 {
                     break;
                 case '/':
                     hasil = angka1 / angka2;
+                    break;
+                default:
+                    System.out.println("operator yang dipilih tidak sesuai");
                     break;
             }
         System.out.println(angka1 + " " + operator + " " + angka2 + " = " + hasil);
