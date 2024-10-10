@@ -3,9 +3,9 @@ public class Pemilihan2Percobaan2_11 {
     public static void main(String[] args) {
         Scanner input11 = new Scanner(System.in);
 
-        int pilihanMenu, harga;
-        String member;
-        double diskon, totalBayar;
+        int pilihanMenu, harga, potonganQris=1000;
+        String member, jenisPembayaran;
+        double diskon = 0.0, totalBayar = 0.0;
 
         System.out.println("--------------------------");
         System.out.println("===== MENU KAFE JTI ======");
@@ -57,7 +57,19 @@ public class Pemilihan2Percobaan2_11 {
         System.out.println("Total bayar = " + harga);
         } else {
             System.out.println("member tidak vallid");
+            return;
         }
-        System.out.println("--------------------------------------");         
+        System.out.print("Apakah jenis pembayaran melalui QRIS (y/n)? = ");
+        jenisPembayaran = input11.nextLine();
+
+        if (jenisPembayaran.equalsIgnoreCase("y")) {
+            totalBayar = totalBayar - potonganQris;
+            System.out.println("Pembayaran melalui QRIS");
+        } 
+
+        System.out.println("Total bayar setelah potongan = " + totalBayar)  x   ;
+        System.out.println("--------------------------------------");
+
     }
-}
+} 
+
