@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 /**
  * Pemilihan2Percobaan1_11
  */
