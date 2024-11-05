@@ -10,8 +10,10 @@ public class ArrayNilai11 {
             System.out.print("Masukkan nilai Akhir ke-" + i + " : ");
             nilaiAkhir[i] = sc.nextInt();
         }
-        for (int i = 0; i < 10; i++) {
-                System.out.println("Nilai Akhir ke-" + i + " adalah " + nilaiAkhir[i]);             
+        for (int i = 0; i < nilaiAkhir.length; i++) {
+                if (nilaiAkhir[i] > 70) {
+                    System.out.println("Nilai Akhir ke-" + i + " lulus! " );             
+                }
             }
         
     }
