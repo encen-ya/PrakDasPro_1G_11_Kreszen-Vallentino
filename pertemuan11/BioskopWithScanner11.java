@@ -9,7 +9,7 @@ public class BioskopWithScanner11 {
         int menu;
 
         while (true) {
-            System.out.print("Menu:");
+            System.out.println("Menu:");
             System.out.println("1. Input data penonton");
             System.out.println("2. Tampilkan daftar penonton");
             System.out.println("3. Exit");
@@ -27,8 +27,12 @@ public class BioskopWithScanner11 {
                     kolom = sc.nextInt();
                     sc.nextLine();
 
+                    if (baris > 0 && baris <= 4 && kolom > 0 && kolom <= 2) {
                     penonton[baris-1][kolom-1] = nama;
                     System.out.println("Data penonton berhasil ditambahkan.");
+                    } else {
+                        System.out.println("Posisi kursi tidak tersedia");
+                    }
                     break;
 
                 case 2:
