@@ -44,13 +44,14 @@ public class BioskopWithScanner11 {
                     break;
 
                 case 2:
-                    System.out.println("Daftar penonton:");
-                    for (int i = 0; i < penonton.length; i++) {
-                        for (int j = 0; j < penonton[i].length; j++) {
-                            System.out.println("Baris " + (i + 1) + " Kolom " + (j + 1) + ": " + penonton[i][j]);
-                        }
+                System.out.println("Daftar penonton:");
+                for (int i = 0; i < penonton.length; i++) {
+                    for (int j = 0; j < penonton[i].length; j++) {
+                        System.out.println("Baris " + (i + 1) + " Kolom " + (j + 1) + ": " + 
+                            (penonton[i][j] == null ? "***" : penonton[i][j]));
                     }
-                    break;
+                }
+                break;
 
                 case 3:
                     System.out.println("Keluar dari program.");
