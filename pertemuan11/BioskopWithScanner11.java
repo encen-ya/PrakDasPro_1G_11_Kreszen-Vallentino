@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class BioskopWithScanner11 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int baris, kolom;
+        // int baris, kolom;
         String nama, next;
         String[][] penonton = new String[4][2];
         int menu;
@@ -21,18 +21,26 @@ public class BioskopWithScanner11 {
                 case 1:
                     System.out.print("Masukkan nama: ");
                     nama = sc.nextLine();
-                    System.out.print("Masukkan baris(1-4): ");
-                    baris = sc.nextInt();
-                    System.out.print("Masukkan kolom(1-2): ");
-                    kolom = sc.nextInt();
-                    sc.nextLine();
-
-                    if (baris > 0 && baris <= 4 && kolom > 0 && kolom <= 2) {
-                    penonton[baris-1][kolom-1] = nama;
-                    System.out.println("Data penonton berhasil ditambahkan.");
-                    } else {
-                        System.out.println("Posisi kursi tidak tersedia");
+                    int baris, kolom;
+                    while (true) {
+                        System.out.print("Masukkan baris(1-4): ");
+                        baris = sc.nextInt();
+                        System.out.print("Masukkan kolom(1-2): ");
+                        kolom = sc.nextInt();
+                        sc.nextLine();
+                        if (baris > 0 && baris <= 4 && kolom > 0 && kolom <= 2) {
+                            if (penonton[baris-1][kolom-1] == null) {
+                                penonton[baris-1][kolom-1] = nama;
+                                System.out.println("Data penonton berhasil ditambahkan.");
+                                break;
+                            } else {
+                                System.out.println("Kursi sudah terisi.");
+                            } 
+                        } else {
+                            System.out.println("Posisi kursi tidak valid.");
+                        }
                     }
+                    
                     break;
 
                 case 2:
