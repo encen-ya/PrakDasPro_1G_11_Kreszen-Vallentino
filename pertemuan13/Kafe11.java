@@ -4,7 +4,6 @@ public class Kafe11 {
 
         if (isMember) {
             System.out.println("Anda adalah member, dapatkan diskon 10% untuk setiap pembelian");
-            
         }
         if (KodePromo.equalsIgnoreCase("DISKON50")) {
             System.out.println("Diskon 50%");
