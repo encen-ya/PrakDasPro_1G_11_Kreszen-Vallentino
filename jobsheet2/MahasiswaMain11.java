@@ -15,6 +15,8 @@ public class MahasiswaMain11 {String nama;
         mhs2.updateIpk(3.30);
         mhs2.tampilkanInformasi();
 
+        Mahasiswa11 mhsKreszen = new Mahasiswa11("Kreszen Vallentino", "244107020205", 3.39, "TI 1G");
+        mhsKreszen.tampilkanInformasi();
 
     }
 }
