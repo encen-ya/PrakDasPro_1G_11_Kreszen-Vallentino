@@ -1,10 +1,18 @@
 {
     "java.project.sourcePaths": [
         "src",
+        "pertemuan9",
+        "pertemuan7",
+        "pertemuan5",
         "pertemuan4",
         "pertemuan3",
         "pertemuan2",
-        "pertemuan5"
+        "pertemuan13",
+        "pertemuan11",
+        "jobsheet2",
+        "jobsheet1",
+        "Pertemuan12",
+        "Praktikum03"
     ],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
