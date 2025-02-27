@@ -3,7 +3,10 @@ import java.util.Scanner;
 public class MataKuliahDemo11 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        MataKuliah11[] arrayOfMatakuliah = new MataKuliah11[3];
+        int pnjgElemen;
+        System.out.println("Masukkan panjang elemen : ");
+        pnjgElemen =  sc.nextInt();
+        MataKuliah11[] arrayOfMatakuliah = new MataKuliah11[pnjgElemen];
         for (int i = 0; i < 3; i++) {
             System.out.println("Masukkann Data Matakuliah ke-" + (i + 1));
             arrayOfMatakuliah[i] = new MataKuliah11("", "", 0, 0);
