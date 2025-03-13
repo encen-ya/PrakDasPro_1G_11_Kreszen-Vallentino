@@ -2,9 +2,11 @@ package BruteForceDivideConquer.minggu5;
 
 public class Faktorial11 {
     int faktorialBF(int n) {
+        int i= 1;
         int fakto = 1;
-        for (int i = 1; i <= n; i++) {
+        while (i <= n) {
             fakto = fakto * i;
+            i++;
         }
         return fakto;
     }
