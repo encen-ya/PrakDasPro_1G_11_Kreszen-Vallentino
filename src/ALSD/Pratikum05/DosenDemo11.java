@@ -1,0 +1,40 @@
+package ALSD.Pratikum05;
+
+import java.util.Scanner;
+
+public class DosenDemo11 {
+    public static void main(String[] args) {
+        DataDosen11 list = new DataDosen11();
+        Scanner sc = new Scanner(System.in);
+        int jumDsn = 5;
+
+        for (int i = 0; i < jumDsn; i++) {
+            System.out.println("Masukkan Data Dosen ke-" + (i + 1));
+            System.out.print("Kode Dosen: ");
+            String kode = sc.nextLine();
+            System.out.print("Nama: ");
+            String nama = sc.nextLine();
+            System.out.print("Jenis Kelamin (L/P): ");
+            String jnsKelamin = sc.nextLine();
+            System.out.print("Usia: ");
+            int usia = sc.nextInt();
+            sc.nextLine();  
+            boolean jenisKelamin = jnsKelamin.equalsIgnoreCase("L");
+
+            list.tambah(new Dosen11(kode, nama, jenisKelamin, usia));
+        }
+
+        list.tampil();
+
+        System.out.println("------------------------------------------------");
+        System.out.println("Pencarian data");
+        System.out.println("------------------------------------------------");
+        System.out.print("Masukkan nama dosen yang dicari: ");
+        String cari = sc.nextLine();
+
+        System.out.println("Menggunakan sequential searching");
+        int posisi = list.sequentialSearching(cari);
+        list.tampilPosisi(cari, posisi);
+        list.tampilDataSearch(cari, posisi);
+    }
+}
