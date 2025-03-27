@@ -33,21 +33,41 @@ public class DataDosen11 {
         }
     }
 
-    int binarySearchUsia(int cari) {
+    void binarySearchUsia(int cari) {
         int left = 0, right = idx - 1;
-
+        int mid = -1;
+    
         while (left <= right) {
-            int mid = left + (right - left) / 2;
+            mid = left + (right - left) / 2;
             if (listDsn[mid].usia == cari) {
-                return mid; 
+                break;
             } else if (listDsn[mid].usia > cari) {
                 right = mid - 1;
             } else {
                 left = mid + 1;
             }
         }
-        return -1; 
+    
+        if (mid == -1 || listDsn[mid].usia != cari) {
+            System.out.println("Data dengan Usia " + cari + " tidak ditemukan.");
+            return;
+        }
+    
+        int i = mid, j = mid;
+        while (i > 0 && listDsn[i - 1].usia == cari) i--;
+        while (j < idx - 1 && listDsn[j + 1].usia == cari) j++;
+    
+        System.out.println("Data Dosen dengan Usia " + cari + " ditemukan:");
+        for (int k = i; k <= j; k++) {
+            System.out.println("- Indeks " + k);
+            listDsn[k].tampilInformasi();
+            
+            if (j > i && k == i) { 
+                System.out.println("Data usia yang dicari lebih dari 1");
+            }
+        }
     }
+    
     
     // void bubbleSort() {
     //     for (int i = 0; i < listDsn.length; i++) {
