@@ -17,16 +17,37 @@ public class DataDosen11 {
         }
     }
     
-    int sequentialSearching(String cari) {
-        for (int j = 0; j < idx; j++) { 
-            if (listDsn[j].nama.equalsIgnoreCase(cari)) { 
-                return j; 
+   void sequentialSearching(String cari) {
+        int posisi = -1;
+        for (int j = 0; j < idx; j++) {
+            if (listDsn[j].nama.equalsIgnoreCase(cari)) {
+                posisi = j;
+                break;
+            }
+        }
+        if (posisi != -1) {
+            System.out.println("Data Dosen dengan Nama '" + cari + "' ditemukan pada indeks " + posisi);
+            listDsn[posisi].tampilInformasi();
+        } else {
+            System.out.println("Data dengan Nama '" + cari + "' tidak ditemukan.");
+        }
+    }
+
+    int binarySearchUsia(int cari) {
+        int left = 0, right = idx - 1;
+
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (listDsn[mid].usia == cari) {
+                return mid; 
+            } else if (listDsn[mid].usia > cari) {
+                right = mid - 1;
+            } else {
+                left = mid + 1;
             }
         }
         return -1; 
     }
-
-    
     
     // void bubbleSort() {
     //     for (int i = 0; i < listDsn.length; i++) {
@@ -50,13 +71,15 @@ public class DataDosen11 {
     //         listDsn[j] = temp;
     //     }
     // }
-    void tampilPosisi(String nama, int pos) {
+    void tampilPosisi(int x, int pos) {
         if (pos != -1) {
-            System.out.println("Data Dosen dengan Nama: " + nama + " ditemukan pada indeks " + pos);
+            System.out.println("Data Dosen dengan Usia " + x + " ditemukan pada indeks " + pos);
+            listDsn[pos].tampilInformasi();
         } else {
-            System.out.println("Data dengan Nama: " + nama + " tidak ditemukan");
+            System.out.println("Data dengan Usia " + x + " tidak ditemukan.");
         }
     }
+
     
     void tampilDataSearch(String nama, int pos) {
         if (pos != -1) {

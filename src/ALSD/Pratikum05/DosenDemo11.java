@@ -26,15 +26,15 @@ public class DosenDemo11 {
 
         list.tampil();
 
-        System.out.println("------------------------------------------------");
-        System.out.println("Pencarian data");
-        System.out.println("------------------------------------------------");
+        System.out.println("--------------------------------------------------");
         System.out.print("Masukkan nama dosen yang dicari: ");
-        String cari = sc.nextLine();
+        String cariNama = sc.nextLine();
+        list.sequentialSearching(cariNama); 
 
-        System.out.println("Menggunakan sequential searching");
-        int posisi = list.sequentialSearching(cari);
-        list.tampilPosisi(cari, posisi);
-        list.tampilDataSearch(cari, posisi);
+        System.out.println("--------------------------------------------------");
+        System.out.print("Masukkan usia dosen yang dicari: ");
+        int cariUsia = sc.nextInt();
+        int posisiUsia = list.binarySearchUsia(cariUsia);
+        list.tampilPosisi(cariUsia, posisiUsia);
     }
 }
