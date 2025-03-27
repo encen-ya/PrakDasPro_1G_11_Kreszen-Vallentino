@@ -8,25 +8,15 @@ public class MahasiswaBerprestasi11 {
     int idx;
 
 
-void tambah(Mahasiswa11 m) {
-    if (idx < listMhs.length) {
-        listMhs[idx] = m;
-        System.out.println("Masukkan data mahasiswa ke-" + (idx + 1));
-        System.out.print("Masukkan Nim Mahasiswa : ");
-        m.nim = sc.nextLine();
-        System.out.print("Masukkan Nama Mahasiswa : ");
-        m.nama = sc.nextLine();
-        System.out.print("Masukkan Kelas Mahasiswa : ");
-        m.kelas = sc.nextLine();
-        System.out.print("Masukkan IPK Mahasiswa : ");
-        m.ipk = sc.nextDouble();
-        sc.nextLine();
-        System.out.println("=====================================");
-        idx++;
-    } else {
-        System.out.println("Data Sudah Penuh");
+    void tambah(Mahasiswa11 m) {
+        if (idx < listMhs.length) {
+            listMhs[idx] = m;
+            idx++;
+        } else {
+            System.out.println("Data sudah penuh");
+        }
     }
-}
+    
 void tampil() {
     for (Mahasiswa11 m : listMhs) {
         m.tampilInformasi();
@@ -68,6 +58,33 @@ void insertionSort() {
             j--;
         }
         listMhs[j] = temp;
+    }
+}
+int sequentialSearching(double cari) {
+    int posisi = -1;
+    for (int j = 0; j < listMhs.length; j++) {
+        if (listMhs[j].ipk == cari) {
+            posisi = j;
+            break;
+        }
+    }
+    return posisi;
+}
+void tampilPosisi(double x, int pos) {
+    if (pos != -1) {
+        System.out.println("Data mahasiswa dengan IPK: " + x + " ditemukan pada indeks " + pos);
+    } else {
+        System.out.println("Data " + x + " tidak ditemukan");
+    }
+}
+void tampilDataSearch(double x, int pos) {
+    if (pos != -1) {
+        System.out.println("nim\t : " + listMhs[pos].nim);
+        System.out.println("nama\t : " + listMhs[pos].nama);
+        System.out.println("kelas\t : " + listMhs[pos].kelas);
+        System.out.println("ipk\t : " + x);
+    } else {
+        System.out.println("Data mahasiswa dengan IPK " + x + " tidak ditemukan");
     }
 }
 
