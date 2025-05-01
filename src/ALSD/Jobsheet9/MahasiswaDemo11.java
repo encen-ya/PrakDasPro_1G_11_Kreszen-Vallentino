@@ -1,5 +1,4 @@
 package ALSD.Jobsheet9;
-
 import java.util.Scanner;
 
 public class MahasiswaDemo11 {
