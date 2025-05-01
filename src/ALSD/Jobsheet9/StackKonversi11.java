@@ -37,6 +37,7 @@ public int pop() {
         top--;
         return data;
     }
+    
 }
 
 }

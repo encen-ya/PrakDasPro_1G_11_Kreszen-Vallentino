@@ -42,6 +42,7 @@ public class MahasiswaDemo11 {
                         String biner = stack.konversiDesimalKeBiner(nilai);
                         System.out.println("Nilai Biner Tugas: " + biner);
                     }
+                    
                     break;
         
                 case 3:

@@ -86,6 +86,4 @@ public Mahasiswa11 bawah() {
         }
         return biner;
     }
-
-
 }
