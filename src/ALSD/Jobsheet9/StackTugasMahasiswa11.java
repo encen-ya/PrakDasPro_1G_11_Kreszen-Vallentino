@@ -69,6 +69,10 @@ public Mahasiswa11 bawah() {
         return null;
     }
 }
+public int jumlahTugas() {
+    return top + 1;
+}
+
 
 
 }
