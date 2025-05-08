@@ -1,5 +1,4 @@
     package ALSD.P1Jobsheet10;
-
     import java.util.Scanner;
 
     public class QueueMain {
@@ -10,10 +9,10 @@
             System.out.println("3. Print");
             System.out.println("4. Peek");
             System.out.println("5. Clear");
-            System.out.println("------------------");
-            
-            
+            System.out.println("0. Keluar"); 
+            System.out.println("--------------------");
         }
+        
         public static void main(String[] args) {
             Scanner sc = new Scanner(System.in);
             System.out.print("Masukkan kapasitas queue: ");
@@ -23,30 +22,52 @@
             do {
                 menu();
                 pilih = sc.nextInt();
+                
                 switch (pilih) {
                     case 1:
-                    System.out.print("Masukkan data baru: ");
-                    int dataMasuk = sc.nextInt();
-                    Q.Enqueue(dataMasuk);
-                    break;
+                        if (Q.IsFull()) {
+                            System.out.println("Queue sudah penuh. Program berhenti.");
+                            pilih = 0; 
+                            break;
+                        }
+                        System.out.print("Masukkan data baru: ");
+                        int dataMasuk = sc.nextInt();
+                        Q.Enqueue(dataMasuk);
+                        break;
+            
                     case 2:
-                    int dataKeluar = Q.Dequeue();
-                    if (dataKeluar != 0) {
+                        if (Q.IsEmpty()) {
+                            System.out.println("Queue masih kosong. Program berhenti.");
+                            pilih = 0; 
+                            break;
+                        }
+                        int dataKeluar = Q.Dequeue();
                         System.out.println("Data yang dikeluarkan: " + dataKeluar);
-                    }
-                    break;
+                        break;
+            
                     case 3:
-                    Q.print();
-                    break;
+                        Q.print();
+                        break;
+            
                     case 4:
-                    Q.peek();
-                    break;
+                        Q.peek();
+                        break;
+            
                     case 5:
-                    Q.clear();
-                    break;
+                        Q.clear();
+                        break;
+            
+                    case 0:
+                        System.out.println("Program selesai.");
+                        break;
+            
+                    default:
+                        System.out.println("Pilihan tidak tersedia.");
                 }
-            } while (pilih == 1 || pilih == 2 || pilih == 3 || pilih == 4 || pilih == 5);
-        }
+            
+            } while (pilih != 0);
+            
         
     }
 
+    }
