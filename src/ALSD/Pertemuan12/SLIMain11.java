@@ -1,26 +1,31 @@
 package ALSD.Pertemuan12;
 
+import java.util.Scanner;
+
 public class SLIMain11 {
-    public class SLLMain00 {
-        public static void main(String[] args) {
-            SingleLinkedList11 sll = new SingleLinkedList11();
-    
-            
-            Mahasiswa11 mhs1 = new Mahasiswa11("24212200", "Alvaro", "1A", 4.0);
-            Mahasiswa11 mhs2 = new Mahasiswa11("23212201", "Bimon", "2B", 3.8);
-            Mahasiswa11 mhs3 = new Mahasiswa11("22212202", "Cintia", "3C", 3.5);
-            Mahasiswa11 mhs4 = new Mahasiswa11("21212203", "Dirga", "4D", 3.6);
-    
-            
-            sll.print();
-            sll.addFirst(mhs4);
-            sll.print();
-            sll.addLast(mhs1);
-            sll.print();
-            sll.insertAfter("Dirga", mhs3); 
-            sll.insertAt(2, mhs2);
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        SingleLinkedList11 sll = new SingleLinkedList11();
+
+        System.out.print("Masukkan jumlah data mahasiswa: ");
+        int jumlah = sc.nextInt();
+        sc.nextLine(); 
+
+        for (int i = 0; i < jumlah; i++) {
+            System.out.println("Data Mahasiswa ke-" + (i + 1));
+            System.out.print("NIM     : ");
+            String nim = sc.nextLine();
+            System.out.print("Nama    : ");
+            String nama = sc.nextLine();
+            System.out.print("Kelas   : ");
+            String kelas = sc.nextLine();
+            System.out.print("IPK     : ");
+            double ipk = sc.nextDouble();
+            sc.nextLine(); 
+
+            Mahasiswa11 mhs = new Mahasiswa11(nim, nama, kelas, ipk);
+            sll.addLast(mhs);
             sll.print();
         }
     }
-    
 }
