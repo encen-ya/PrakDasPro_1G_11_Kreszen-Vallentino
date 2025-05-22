@@ -1,13 +1,13 @@
 package ALSD.TugasPertemuan13;
 
 public class Node {
-    public Node prev;
-    public Pasien psn;
-    public Node next;
+    Film data;
+    Node prev;
+    Node next;
 
-    public Node(Node prev, Pasien psn, Node next) {
-        this.prev = prev;
-        this.psn = psn;
-        this.next = next;
+    public Node(Film data) {
+        this.data = data;
+        this.prev = null;
+        this.next = null;
     }
 }
