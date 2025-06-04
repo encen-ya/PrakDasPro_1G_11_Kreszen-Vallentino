@@ -63,7 +63,7 @@ public void clear() {
 
 public void Enqueue(int dt) {
     if (IsFull()) {
-        System.out.println("Queue sudah penuh");
+        System.out.println("Queue sudah penuh");        
     } else {
         if (IsEmpty()) {
             front = rear = 0;

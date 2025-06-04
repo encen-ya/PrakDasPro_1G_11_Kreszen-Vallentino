@@ -1,13 +1,15 @@
+package ALSD.Praktikum03;
 import java.util.Scanner;
 
 public class MataKuliahDemo11 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int pnjgElemen;
-        System.out.println("Masukkan panjang elemen : ");
+        System.out.print("Masukkan panjang elemen : ");
         pnjgElemen =  sc.nextInt();
+        sc.nextLine();
         MataKuliah11[] arrayOfMatakuliah = new MataKuliah11[pnjgElemen];
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < pnjgElemen; i++) {
             System.out.println("Masukkann Data Matakuliah ke-" + (i + 1));
             arrayOfMatakuliah[i] = new MataKuliah11("", "", 0, 0);
             arrayOfMatakuliah[i].tambahData(sc);

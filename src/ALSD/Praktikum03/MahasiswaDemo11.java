@@ -1,3 +1,6 @@
+package ALSD.Praktikum03;
+
+
 import java.util.Scanner;
 
 public class MahasiswaDemo11 {
@@ -15,7 +18,7 @@ public class MahasiswaDemo11 {
             System.out.print("Nama  : ");
             arrayOfMahasiswa11[i].nama = sc.nextLine();
             System.out.print("Kelas : ");
-            arrayOfMahasiswa11[i].kelas = sc.nextLine();
+            arrayOfMahasiswa11[i].kelas = sc.nextLine();    
             System.out.print("IPK   : ");
             dummy = sc.nextLine(); 
             arrayOfMahasiswa11[i].ipk = Float.parseFloat(dummy);

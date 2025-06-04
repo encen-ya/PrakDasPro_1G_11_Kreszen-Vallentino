@@ -1,3 +1,4 @@
+package ALSD.Praktikum03;
 public class Dosen11 {
     public String kode;
     public String nama;

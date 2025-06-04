@@ -1,4 +1,6 @@
-public class MahasiswaMain11 {String nama;
+package ALSD.jobsheet2;
+
+public class MahasiswaMain11 {
     public static void main(String[] args) {
         Mahasisswa11 mhsl = new Mahasisswa11();
         mhsl.nama = "Muhammad Ali Farhan";

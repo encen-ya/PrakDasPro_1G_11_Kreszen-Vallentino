@@ -14,5 +14,7 @@ public class Film {
     public String toString() {
         return "ID: " + id + "\nJudul Film: " + judul + "\nRating: " + rating;
     }
+
+    
 }
 

@@ -1,3 +1,5 @@
+package ALSD.Praktikum03;
+
 import java.util.Scanner;
 
 public class DosenDemo11 {

@@ -1,7 +1,7 @@
 package ALSD.TugasPertemuan13;
 
 public class QueuePasien {
-    Node front, rear;
+    Node11 front, rear;
     int size;
 
     public QueuePasien() {
@@ -12,7 +12,7 @@ public class QueuePasien {
     }
 
    public void enqueue(Pasien psn) {
-    Node node = new Node(null, psn, null);
+    Node11 node = new Node11(null, psn, null);
 
     if (isEmpty()) {
         front = rear = node;
@@ -49,7 +49,7 @@ public class QueuePasien {
             System.out.println("Daftar Pengantri Vaksin");
             System.out.println("+++++++++++++++++++++++");
             System.out.println("|No.\t|Nama\t|");
-            Node tmp = front;
+            Node11 tmp = front;
             while (tmp != null) {
                 tmp.psn.print();
                 tmp = tmp.next;

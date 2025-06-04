@@ -51,7 +51,7 @@ void insertionSort() {
             data[j + 1] = data[j];
             j--;
         }
-        data[j + 1] = temp;
+        data[j + 1] = temp; 
     }
 }
 

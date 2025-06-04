@@ -1,3 +1,5 @@
+package ALSD.jobsheet2;
+
 public class Mahasisswa11 {
         String nama;
         String nim;

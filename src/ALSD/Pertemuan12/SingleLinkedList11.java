@@ -62,7 +62,7 @@ public class SingleLinkedList11 {
     
     public void insertAt(int index, Mahasiswa11 input) {
         if (index < 0) {
-            System.out.println("x: indeks salah");
+            System.out.println("indeks salah");
         } else if (index == 0) {
             addFirst(input);
         } else {
@@ -102,7 +102,7 @@ public class SingleLinkedList11 {
     
     public void removeFirst() {
         if (isEmpty()) {
-            System.out.println("x: Linked List masih Kosong, tidak dapat dihapus!");
+            System.out.println("Linked List masih Kosong, tidak dapat dihapus!");
         } else if (head == tail) {
             head = tail = null;
         } else {
@@ -112,7 +112,7 @@ public class SingleLinkedList11 {
     
     public void removeLast() {
         if (isEmpty()) {
-            System.out.println("x: Linked List masih Kosong, tidak dapat dihapus!");
+            System.out.println("Linked List masih Kosong, tidak dapat dihapus!");
         } else if (head == tail) {
             head = tail = null;
         } else {
@@ -127,7 +127,7 @@ public class SingleLinkedList11 {
     
     public void remove(String key) {
         if (isEmpty()) {
-            System.out.println("x: Linked List masih Kosong, tidak dapat dihapus!");
+            System.out.println("Linked List masih Kosong, tidak dapat dihapus!");
         } else {
             Node11 temp = head;
             while (temp != null) {

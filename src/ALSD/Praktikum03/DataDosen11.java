@@ -1,3 +1,4 @@
+package ALSD.Praktikum03;
 public class DataDosen11 {
     public DataDosen11(Dosen11[] arraytOfDosen){
     }

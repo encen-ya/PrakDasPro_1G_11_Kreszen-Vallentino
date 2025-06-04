@@ -1,3 +1,5 @@
+package ALSD.Praktikum03;
+
 public class Mahasiswa11 {
     public String nim;
     public String nama;

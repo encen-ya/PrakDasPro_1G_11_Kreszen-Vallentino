@@ -109,7 +109,7 @@ public class DataDosen11 {
             System.out.println("Jenis Kelamin : " + (listDsn[pos].jnsKelamin ? "Laki-laki" : "Perempuan"));
         } else {
             System.out.println("Data dosen dengan Nama " + nama + " tidak ditemukan");
-        }
+        } 
     }
     
     

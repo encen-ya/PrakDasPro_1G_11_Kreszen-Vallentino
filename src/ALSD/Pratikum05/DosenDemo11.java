@@ -35,6 +35,7 @@ public class DosenDemo11 {
         System.out.print("Masukkan usia dosen yang dicari: ");
         int cariUsia = sc.nextInt();
         list.binarySearchUsia(cariUsia);
-
+        
+        
     }
 }
